@@ -46,7 +46,7 @@ export function Header() {
                 </Button>
               </div>
             ) : (
-              <a href="/login">
+              <a href="#/login">
                 <Button
                   variant="ghost"
                   size="sm"
