@@ -164,7 +164,7 @@ export function FileUpload({ onUploadComplete }: FileUploadProps) {
       if (dbError) throw new Error(dbError.message);
 
       storeOwnerToken(shortId, ownerToken);
-      setCreatedLink(`${window.location.origin}/link/?id=${shortId}`);
+      setCreatedLink(`${window.location.origin}${window.location.pathname}#/link?id=${encodeURIComponent(shortId)}`);
       onUploadComplete?.();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Nie udało się wrzucić pliku');
